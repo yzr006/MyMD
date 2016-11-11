@@ -93,7 +93,7 @@ iphone5: 640
 iphone6: 750
 iphone6s: 1240
 */
-//获取屏幕的物理宽度
+//获取屏幕的逻辑像素宽度
 var deviceWidth = document.documentElement.clientWidth;
 //设置根元素的font-size
 document.documentElement.style.fontSize = (deviceWidth / 640 * 100) + 'px';
