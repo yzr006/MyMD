@@ -94,7 +94,7 @@ iphone6: 750
 iphone6s: 1240
 */
 //获取屏幕的物理宽度
-var deviceWidth = window.documentElement.clientWidth;
+var deviceWidth = document.documentElement.clientWidth;
 //设置根元素的font-size
 document.documentElement.style.fontSize = (deviceWidth / 640 * 100) + 'px';
 ```
@@ -111,7 +111,7 @@ document.documentElement.style.fontSize = (deviceWidth / 640 * 100) + 'px';
 ```javascript
 window.onresize = function(){
     //获取屏幕的物理宽度
-    var deviceWidth = window.documentElement.clientWidth;
+    var deviceWidth = document.documentElement.clientWidth;
     //设置根元素的font-size
     document.documentElement.style.fontSize = (deviceWidth / 640 * 100) + 'px';
 };
