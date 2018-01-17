@@ -1,0 +1,12 @@
+
+
+# Chromium与Chrome
+Chromium是一个由Google主导开发的网页浏览器，以BSD许可证等多重自由版权发行，并开放源代码。Chromium的开发可能在2006年就已开始。
+
+Chromium是Google为发展自家浏览器Google Chrome而创立的项目，所以Chromium相当于Google Chrome的工程版或实验版，新功能会率先在Chromium上开放，待验证后，才会应用在Google Chrome上，故Google Chrome的功能会相对落后但较稳定。
+
+Chromium的更新速度很快，每隔数小时即有新的开发版本发布，而且可以免安装，下载zip封装版后解压缩即可使用（Windows下也有安装版）。Chrome虽然理论上也可以免安装，但Google仅提供安装版。
+
+Google Chrome是基于Chromium制造，但包含非开放源代码包，主要是多媒体相关。
+
+还有些其他区别，具体请Google，这里就不详述了。
