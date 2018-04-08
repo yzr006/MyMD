@@ -75,7 +75,19 @@ $ npm publish
 ```
 
 # 其他
+## 1. 如何安装使用自己的包？
+发布成功之后，在项目中，像使用其他包一样，直接`npm install`即可
 
+## 2. 关于`npm token`
 本地登录npm账号之后，在npm官网会生成一个token，用来记录本次登录。
 
 token可以控制登录账户的读写权限，还可以做一些其他事情，关于npm token的具体使用，请参考：[链接](https://docs.npmjs.com/cli/token)
+
+## 3. 包名重复咋解决？
+可以使用npm的包作用域功能，类似`@username/my-npm-package`。
+
+具体可参考：
+
+[官方参考](https://docs.npmjs.com/misc/scope)
+
+[第三方博客](http://huang-x-h.github.io/2016/06/09/using-npm-scoped-package/)
