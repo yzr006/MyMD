@@ -42,7 +42,7 @@ export default {
 ### 关于打包格式
 对于浏览器：
 ```js
-// 打包输出为一个<script>标签，包含一个iife
+// 打包输出为一个 iife，可以直接在浏览器的<script>标签中使用
 format: 'iife',
 ```
 对于 Node.js：
