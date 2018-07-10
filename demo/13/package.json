@@ -4,7 +4,7 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "build": "rollup -c rollup.config.js"
   },
   "author": "terry",
   "license": "ISC",
