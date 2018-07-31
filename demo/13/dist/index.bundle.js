@@ -1,13 +1,13 @@
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    (factory());
-}(this, (function () { 'use strict';
+(function (axios) {
+    'use strict';
+
+    axios = axios && axios.hasOwnProperty('default') ? axios['default'] : axios;
 
     function test1() {
         alert('test1');
+        console.log(axios);
     }
 
     test1();
 
-})));
+}(axios));
