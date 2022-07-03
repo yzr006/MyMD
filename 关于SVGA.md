@@ -18,6 +18,8 @@
 
 图片占用内存：
 > 当我们通过代码，将图片加载进内存时，系统会先解析图片文件本身的数据格式，然后还原为位图，也就是 Bitmap 对象，Bitmap 的大小，取决于像素点的数据格式，以及分辨率。
+> 
+> PS: 感兴趣的同学，可以顺便补充下 [Bitmap](http://www.woshipm.com/it/4070505.html) 的知识。
 
 通常来说，一个 SVGA，都是由多张 32 位的 PNG 图片打包压缩而成。所以，SVGA 加载之后所占用的内存大小，就是其内部所有 PNG 图像所占用内存的总大小。
 
@@ -26,13 +28,14 @@
 所以，一张 32 位的 PNG 图片，占用的内存大小，计算公式为：
 > 像素长 * 像素宽 * 32 / 8 = 像素数量 * 4 (Byte)
 
+另外，关于安卓端图片占用内存大小的更多技术细节，可以参考[这篇文章](https://www.cnblogs.com/dasusu/p/9789389.html)。
 
 ## SVGA 占用内存的计算
 ### Node 端获取方式
-SVGA Path -> ArrayBuffer -> Pako 解压 -> 根据一份 PB 协议解析出内部的 PNG -> 获取每个 PNG 的宽高 -> 计算每个 PNG 的内存大小 -> 内存总和
+SVGA Path -> ArrayBuffer -> [Pako](https://github.com/nodeca/pako) 解压 -> 根据一份 PB 协议解析出内部的 PNG -> 获取每个 PNG 的宽高 -> 计算每个 PNG 的内存大小 -> 内存总和
 
 感兴趣的同学，可以研究下[源码](https://gitlab.com/lnts/svga-check-memory/-/blob/master/index.js)。
 ### 纯前端获取方式
 官方提供了 SVGA Parser 工具，可以解析 SVGA 文件，获取内部所有 PNG 的宽高，计算每个 PNG 的内存大小，再计算总和即可。
-#### 挖掘 SVGA 官网的计算方式
+### 挖掘 SVGA 官网的计算方式
 打开控制台 -> 定位到显示内存大小的 DOM 元素 -> 获取 DOM 元素 ID -> 在控制台源码中搜索 ID -> 找到相关源码 -> 复制到编辑器并格式化 -> 细品即可
